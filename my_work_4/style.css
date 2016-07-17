@@ -5,7 +5,7 @@ body {
 .body{
 	width: 1000px;
 	height: 100%;
-	background: #ffffff;
+	
 	margin: 0 auto;
 	box-shadow: 0 2px 5px 2px #084c69;
 }
@@ -14,6 +14,7 @@ body {
 
 header{
 	height: 411px;
+	background: #ffffff;
 }
 .header{
 	width: auto;
@@ -25,11 +26,6 @@ header{
 	height: 175px;
 	float: left;	
 	display: block;
-}
-
-p{
-	font: Tahoma 10px;
-	letter-spacing: -1px;
 }
 
 .contact{
@@ -77,99 +73,118 @@ p{
 /*MENU*/
 
 ul, li{
-	margin:0;
+	margin: 1px 0 0 0;
     padding:0;
 }
 
 #menu{
 	display: block;
-    position: absolute;
     background: url(images/menu.jpg) repeat-x;
     width: 1000px;
-    height: 32px;
-    line-height: 32px;
+    height: 28px;
+    line-height: 28px;
     font-size: 14px;
+    border-top: 2px solid #cacbcb;
+    border-bottom: 1px solid #000000;
+    box-shadow: 0px 6px 10px 1px #333e3e;
 }
 
  #menu li{
     display: inline-block;
-    height: 32px;
-    margin: 0 15px 0 45px;
     position: relative;
+    height: 28px;
+    margin: 0 15px 0 35px;
 }
 
 #menu li ul{
-    position: absolute;
-    top: 32px;
     display: none;
+    position: absolute;
     margin: 0 -10px;
     line-height: 25px;
 }
 
 #menu li ul li{
 	background: url(images/submenu.png) repeat-x;
+	box-shadow: 0px 6px 10px 1px #333e3e;
 	width: 150px;
 	height: 25px;
   	margin: 0;
   	padding: 0 10px;
+  	z-index: 1;
 }
 
 #menu li:hover ul{
-     display:block;  
+     display:inline-block;  
 }
 
 #menu li a{
 	color: #ffffff;
     text-decoration: none;
-  	height: 32px;
+  	height: 28px;
   	line-height: 25px;
 }
 
 .tr:after{
 	position: absolute;
 	content: '';
-	top: 14px;
+	top: 12px;
 	right: -10px;
-	width: 7px;
-	height: 7px;
-	background: url(images/tr.png) no-repeat right;
+	width: 0;
+	height: 0;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 7px solid white;
 }
 
 /*CONTENT*/
 
 .content{
-	display: table;
-    position: relative;
-    margin:32px 0 0;
-   	font-size: 0;
-   	color: #424c43;
+	background: url(images/fon-c.jpg) repeat-y;
+	box-shadow: 0 2px 5px 2px #084c69;
+	width: 1000px;
+	float: left;
+	position: relative;
+	display: block;
+    overflow: hidden; /* чтобы лишее обрезалось */
 }
 
 .first{
-	background: #edeef0;
-	width: 157px;
-	display: table-cell; /*сво-во: строятся друг возле друга*/
-	vertical-align: top; /*обязательно указывать-чтоб не прыгал текст*/
-	font-size: 12px;
-	padding: 8px 24px 13px 15px;
-	border-left: 1px solid #c7cacf;
-   	border-right: 1px solid #c7cacf;
+	position: relative;
+	width: 190px;
+	float: left;
+	padding: 13px 10px 0 10px;
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
 }
 
 .second{
-	background: #ffffff;
+	position: relative;
 	width: 560px;
-	display: table-cell;
-	vertical-align: top;
-	font-size: 12px;
-	padding: 8px 24px 13px 24px;
+	float: left;
+	padding: 13px 10px 0 10px;
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
 }
 
 /*FOOTER*/
 
 .footer{
+	display: block;
+	position: relative;
+	clear: left;
 	height: 30px;
 	color: white;
 	text-align: center;
 	line-height: 30px;
+}
+
+h3{
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+}
+
+p{
+	font: Tahoma 10px;
+	letter-spacing: -1px;
 }
